@@ -1,0 +1,126 @@
+$main-color: #e97777;
+$second-color: #ff9f9f;
+$third-color: #fcddb0;
+$dark-color: #fffad7;
+
+.App {
+  & * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+  padding: 2rem 0;
+  background-color: $second-color;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $second-color;
+
+  gap: 1rem;
+
+  &_h {
+    flex-direction: row;
+    background-color: $main-color;
+  }
+
+  &.wrapper {
+    width: min(100%, 800px);
+    border: 2px solid $main-color;
+    gap: 0;
+    border-radius: 0.5rem;
+
+    & * {
+      width: min(100%, 720px);
+    }
+    & > * {
+      padding: 0.5rem 1rem;
+      &:first-child {
+        width: 100%;
+      }
+    }
+
+    & > *:nth-child(1) {
+      justify-content: flex-start;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 0.7rem;
+
+      & > * {
+        width: fit-content;
+      }
+    }
+    & > *:nth-child(2) {
+      padding: 0 1rem;
+    }
+  }
+
+  #editor {
+    width: min(100%, 800px);
+    min-height: min(100vh, 20rem);
+    font-size: 0.8rem;
+    resize: vertical;
+    border-bottom: none;
+    border: none;
+    border-bottom: none;
+    border-radius: 0 0 0.35rem 0.35rem;
+    padding: 0.8rem 0.8rem 0;
+    background-color: $second-color;
+    font-weight: 600;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  #preview {
+    align-items: start;
+    padding: 1rem 0;
+    gap: 1.5rem;
+    min-height: 30rem;
+
+    & * {
+      width: fit-content;
+    }
+    ul,
+    ol {
+      padding: 0.2rem 1rem;
+    }
+
+    code {
+      padding: 0.2rem 0.3rem;
+      border-radius: 0.5rem;
+      background-color: $third-color;
+      color: black;
+      font-size: 0.7rem;
+    }
+
+    pre {
+      @extend ol;
+      line-height: 1rem;
+      border-left: 5px solid $main-color;
+      background-color: $third-color;
+
+      & * {
+        padding: 0;
+        color: black;
+      }
+    }
+    h1 {
+      border-bottom: 0.35rem solid white;
+      padding: 0.2rem 0 0.2rem;
+      font-size: 2.1rem;
+    }
+    h2 {
+      border-bottom: 0.2rem solid white;
+      padding: 0rem 0 0.1rem;
+    }
+  }
+}
+
+img {
+  width: 100% !important;
+}

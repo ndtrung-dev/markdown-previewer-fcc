@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# markdown-previewer-fcc
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a project to fulfiled _Front End Development Libraries_ Course provided by freeCodeCamp.
 
-## Available Scripts
+Goals: Create a random quote generator similar to this: https://markdown-previewer.freecodecamp.rocks/.
 
-In the project directory, you can run:
+In this project, the tech stack was used ReactJS and SCSS. <br>
+Check out the live demo [here](https://ndtrung-dev.github.io/markdown-previewer-fcc)
 
-### `npm start`
+## Requirements:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Tech stacks:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> Using any mix of HTML, Javascript, CSS, Bootstrap, SASS, React, Redux, and jQuery.<br>
+> Andditional tech unlisted are not recommended.
 
-### `npm test`
+### User story:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> 1. I can see a textarea element with a corresponding _id="editor"_.
+>
+> 1. I can see an element with a corresponding _id="preview"_.
+>
+> 1. When I enter text into the #editor element, the #preview element is updated as I type to display the content of the textarea.
+>
+> 1. When I enter GitHub flavored markdown into the _#editor_ element, the text is rendered as HTML in the _#preview_ element as I type (HINT: You don't need to parse Markdown yourself - you can import the Marked library for this: https://cdnjs.com/libraries/marked).
+>
+> 1. When my markdown previewer first loads, the default text in the _#editor_ field should contain valid markdown that represents at least one of each of the following elements: a heading element (H1 size), a sub heading element (H2 size), a link, inline code, a code block, a list item, a blockquote, an image, and bolded text.
+>
+> 1. When my markdown previewer first loads, the default markdown in the _#editor_ field should be rendered as HTML in the _#preview_ element.
+>
+> 1. My markdown previewer interprets carriage returns and renders them as _br_ (line break) elements.
 
-### `npm run build`
+### Testing tools
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<em>FCC Testing CDN</em> (https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js) is provided by freeCodeCamp
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Result
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All checkpoint passed!
 
-### `npm run eject`
+<b>Note:</b><br> - <code>defaultInput</code> is retrieved from provided example. <br> - <code>marked</code> library is added via CDN query and implemented through <code>window.marked.parse()</code>.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Source code uploaded to [github](https://github.com/ndtrung-dev/markdown-previewer-fcc).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Live demo](https://ndtrung-dev.github.io/markdown-previewer-fcc) is uploaded to github using <code>gh-pages</code>. <em>FCC Testing CDN</em> was embedded. Select <code>markdown-previewer</code> option from dropdown menu to verify the result.

@@ -1,5 +1,7 @@
-import "./App.css";
+import "./App.scss";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFreeCodeCamp } from "@fortawesome/free-brands-svg-icons";
 
 const defaultInput = `# Welcome to my React Markdown Previewer!
 
@@ -64,7 +66,7 @@ function App() {
       setLoadedScript(true);
     });
     document.head.appendChild(script);
-    
+
     convert(input);
     return () => {
       document.head.removeChild(script);
@@ -83,9 +85,29 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <textarea id="editor" onChange={handleOnChange} value={input}></textarea>
-      <div id="preview" dangerouslySetInnerHTML={{ __html: output }}></div>
+    <div className="App container">
+      <div className="container wrapper" id="editor-wrapper">
+        <div id="editor-header-container" className="container container_h">
+          <FontAwesomeIcon icon={faFreeCodeCamp} />
+          <h2 id="preview-header">Edtior</h2>
+        </div>
+        <textarea
+          id="editor"
+          onChange={handleOnChange}
+          value={input}
+        ></textarea>
+      </div>
+      <div id="preview-wrapper" className="container wrapper">
+        <div id="preview-header-wrapper" className="container container_h">
+          <FontAwesomeIcon icon={faFreeCodeCamp} />
+          <h2 id="preview-header">Preview</h2>
+        </div>
+        <div
+          id="preview"
+          className="container"
+          dangerouslySetInnerHTML={{ __html: output }}
+        ></div>
+      </div>
     </div>
   );
 }
